@@ -1,5 +1,9 @@
 body{
-    background-color: rgb(26, 183, 231);
+    background-image: url("../Imagens/fundoneutro.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 img{
     width: 200px;
@@ -20,6 +24,11 @@ h2{
     font-family: Instrument Serif, serif;
     font-size: 42px;
 }
+h3{
+    text-align: center;
+    font-family:  Sora, sans-serif;
+    font-size: 25px;
+}
 p{
     text-align: justify;
     font-size: 18px;
@@ -27,5 +36,111 @@ p{
     width: 500px;
     padding: 10px;
     margin: 0 auto;
-
+}
+.redes-sociais{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.redes-sociais ul{
+    list-style: none;
+    padding: 0;
+}
+.redes-sociais li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+.icone{
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+}
+.redes-sociais a{
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+}
+.redes-sociais a:hover{
+    color: #007BFF;
+}
+.contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+input[type="text"],
+input[type="email"],
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#assunto{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+.form-group label{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 8px;
+}
+button[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 200;
+}
+button[type="submit"]:hover{
+    background-color:#b3b8bd;
+    color: #333;
+}
+.menu-navegação{
+    padding: 15px 0;
+    text-align: center;
+}
+.menu-navegação ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-navegação li{
+    display: inline;
+    margin: 0 15px;
+}
+.menu-navegação a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    transition: color 0.3s;
+}
+.menu-navegação a:hover{
+    color: #007BFF;
 }
