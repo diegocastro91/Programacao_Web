@@ -144,3 +144,87 @@ button[type="submit"]:hover{
 .menu-navegação a:hover{
     color: #007BFF;
 }
+.portifolio{
+    text-align: left;
+    margin-left: 20px;
+    font-family: Instrument Serif, serif;
+    font-size: 40px;
+}
+.projeto-link{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    width: fit-content;
+}
+.projeto-link a{
+    text-decoration: none;
+    color: #070707;
+    font-size: 20px;
+}
+.icone-proj{
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+.objetivo-projeto{
+    text-align: justify;
+    margin-left: 20px;
+}
+.objetivo-projeto2{
+    text-align: justify;
+    margin-right: 20px;
+}
+.projetos-git{
+    text-align: left;
+    margin-left: 30px;
+    font-family: Sora, sans-serif;
+    font-size: 20px;
+}
+.projetos-git2{
+    text-align: right;
+    margin-right: 30px;
+    font-family: Sora, sans-serif;
+    font-size: 20px;
+}
+.projeto-link2{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+.icone-proj2{
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+.projeto-link2 a{
+    text-decoration: none;
+    color: #070707;
+    font-size: 20px;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin-left: 5%;
+    margin-right: auto;
+}
+.skills li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.icone2{
+    width: 40px;
+    height: auto;
+    margin-right: 15px;
+}
+.skills span{
+    font-family: Sora, sans-serif;
+    font-size: 20px;
+    color:#070707;
+}
