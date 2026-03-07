@@ -254,3 +254,15 @@ button[type="submit"]:hover{
     display: block;
     margin: 0;
 }
+.video-container{
+    width: 500px;
+    height: 300px;
+    margin: 30px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: o 8px 15px rgba(0, 0, 0, 0.1);
+}
+.video-container iframe{
+    width: 100%;
+    height: 100%;
+}
