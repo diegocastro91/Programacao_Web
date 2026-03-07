@@ -146,7 +146,7 @@ button[type="submit"]:hover{
 }
 .portifolio{
     text-align: left;
-    margin-left: 20px;
+    margin-left: 37%;
     font-family: Instrument Serif, serif;
     font-size: 40px;
 }
@@ -210,7 +210,7 @@ button[type="submit"]:hover{
     justify-content: flex-start;
     list-style: none;
     padding: 0;
-    margin-left: 5%;
+    margin-left: 45%;
     margin-right: auto;
 }
 .skills li{
