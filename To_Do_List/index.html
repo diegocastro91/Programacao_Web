@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Tarefas Inteligente</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
 
+<body>
+    <header>
+        <h1>Agenda de Tarefas Inteligente</h1>
+        <p>Organize suas atividades diárias com categorias e prioridades.</p>
+    </header>
+
+    <main class="container">
+        <section id="cadastro">
+            <h2>Nova Tarefa</h2>
+            <form id="task-form">
+                <input  type="text" id="task-name" placeholder="Nome da tarefa" required>
+
+                <select id="task-category" required>
+                    <option value="">Selecione a Categoria</option>
+                    <option value="Trabalho">Trabalho</option>
+                    <option value="Estudos">Estudos</option>
+                    <option value="Pessoal">Pessoal</option>
+                </select>
+
+                <select id="task-priority " required>
+                    <option value="">Prioridade</option>
+                    <option value="Alta">Alta</option>
+                    <option value="Média">Média</option>
+                    <option value="Baixa">Baixa</option>
+                </select>
+
+                <input type="date" id="task-deadline" required>
+
+                <button type="submit" id="add-btn">Adicionar Tarefa</button>
+            </form>
+        </section>
+
+        <section id="exibicao">
+            <div class="filters">
+                <select id="filter-category">
+                    <option value="all">Todas as Categorias</option>
+                    <option value="Trabalho">Trabalho</option>
+                    <option value="Estudos">Estudos</option>
+                    <option value="Pessoal">Pessoal</option>
+                </select>
+                
+                <button id="sort-priority">Ordenar por Prioridade</button>
+            </div>
+
+            <div id="task-list"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>    
+</body>
+</html>
