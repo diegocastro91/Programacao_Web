@@ -74,18 +74,18 @@ function deleteTask(id){
 
 //5.filtro por categoria
 filterCategory.addEventListener('change', (e) =>{
-    const selected = e.target.value;
+    const selected = e.target.value; //pegando o valor do select do HTML
     if (selected === 'Todos') {
-        renderTasks();
+        renderTasks(); //passa a lista original coompleta
     } else {
         const filtered = tasks.filter(t => t.category === selected);
-        renderTasks(filtered);
+        renderTasks(filtered); //passa apenas as tarefas filtradas
     }
 });
 
 //6.ordenação por prioridade(bônus/requisito)
 sortPriorityBtn.addEventListener('click', () => {
-    const order = {'Alta': 1, 'Media': 2, 'Baixa': 3};
+    const order = {'Alta': 1, 'Média': 2, 'Baixa': 3};
     tasks.sort((a, b) => order[a.priority] - order[b.priority]);
     renderTasks();
 });
