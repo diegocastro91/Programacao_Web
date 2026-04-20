@@ -1,0 +1,51 @@
+/*configurações básicas*/
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr; /*divide em duas colunas no desktop*/
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*responsividade para celular*/
+@media (max-width: 768px){
+    .container{
+        grid-template-columns: 1fr; /*uma coluna no celular*/
+    }
+}
+
+/*estilos dos cards de tarefas*/
+.task-card{
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5 px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*cores de prioridade*/
+.priority-alta{border-left: 5px solid red;}
+.priority-media{border-left: 5 px solid orange;}
+.priority-baixa{border-left: 5px solid green;}
+
+/*tarefa concluida*/
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/*botões com hover*/
+button:hover{
+    filter: brightness(0.9);
+    cursor: pointer;
+}
