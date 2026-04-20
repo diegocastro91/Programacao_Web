@@ -42,7 +42,7 @@ body{
 
 /*cores de prioridade*/
 .priority-alta{border-left: 5px solid red;}
-.priority-media{border-left: 5 px solid orange;}
+.priority-media{border-left: 5px solid yellow;}
 .priority-baixa{border-left: 5px solid green;}
 
 /*tarefa concluida*/
