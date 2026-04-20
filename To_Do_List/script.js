@@ -32,7 +32,7 @@ function renderTasks(filteredTasks = tasks){
 
     //mensagem de lista vazia(bônus)
     if (filteredTasks.length === 0){
-        taskContainer.innerHTML = '<p style="text-align:center;">Nenhuma tarefa encontrada.</p>';
+        taskContainer.innerHTML = '<p style="text-align:center; padding-top:20px;">Nenhuma tarefa encontrada.</p>';
         return;
     }
 
