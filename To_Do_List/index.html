@@ -16,7 +16,7 @@
     <main class="container">
         <section id="cadastro">
             <h2>Nova Tarefa</h2>
-            <form id="task-form">
+            <form id="todo-form">
                 <input  type="text" id="task-name" placeholder="Nome da tarefa" required>
 
                 <select id="task-category" required>
@@ -26,14 +26,14 @@
                     <option value="Pessoal">Pessoal</option>
                 </select>
 
-                <select id="task-priority " required>
+                <select id="task-priority" required>
                     <option value="">Prioridade</option>
                     <option value="Alta">Alta</option>
                     <option value="Média">Média</option>
                     <option value="Baixa">Baixa</option>
                 </select>
 
-                <input type="date" id="task-deadline" required>
+                <input type="date" id="task-date" required>
 
                 <button type="submit" id="add-btn">Adicionar Tarefa</button>
             </form>
@@ -51,7 +51,7 @@
                 <button id="sort-priority">Ordenar por Prioridade</button>
             </div>
 
-            <div id="task-list"></div>
+            <div id="task-container"></div>
         </section>
     </main>
 

@@ -1,9 +1,16 @@
+/*estilos gerais*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /*configurações básicas*/
 body{
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin: 0;
-    padding: 20;
+    padding: 20px;
 }
 
 .container{
@@ -27,7 +34,7 @@ body{
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 5 px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -22,7 +22,7 @@ taskForm.addEventListener('submit', (e) => {
     };
 
     tasks.push(newTask);
-    taskForm.requestFullscreen(); //limpa o formulário
+    taskForm.reset(); //limpa o formulário
     renderTasks(); //atualiza a tela
 });
 
@@ -31,7 +31,7 @@ function renderTasks(filteredTasks = tasks){
     taskContainer.innerHTML = ''; //limpa a lista antes de redesenhar
 
     //mensagem de lista vazia(bônus)
-    if (filteredTasks.lenght === 0){
+    if (filteredTasks.length === 0){
         taskContainer.innerHTML = '<p style="text-align:center;">Nenhuma tarefa encontrada.</p>';
         return;
     }
@@ -42,7 +42,7 @@ function renderTasks(filteredTasks = tasks){
         //aplica a classe de prioridade para a cor lateral
         const priorityClass = `priority-${task.priority.toLowerCase()}`;
 
-        taskCard.classname = `task-card ${priorityClass} ${task,completed ? 'completed' : ''}`;
+        taskCard.className = `task-card ${priorityClass} ${task.completed ? 'completed' : ''}`;
 
         taskCard.innerHTML = `
             <div>
@@ -74,7 +74,7 @@ function deleteTask(id){
 
 //5.filtro por categoria
 filterCategory.addEventListener('change', (e) =>{
-    const selected = e.terget.value;
+    const selected = e.target.value;
     if (selected === 'Todos') {
         renderTasks();
     } else {
