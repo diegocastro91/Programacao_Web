@@ -1,3 +1,19 @@
+/*definição das variáveis de cor*/
+:root{
+    --bg-color: #f0f2f5;
+    --text-color:#333;
+    --card-bg: #ffffff;
+    --header-color: #000;
+}
+
+/*cores para o modo escuro*/
+[data-theme="dark"]{
+    --bg-color: #18191a;
+    --text-color: #e4e6eb;
+    --card-bg: #242526;
+    --header-color: #fff;
+}
+
 /*estilos gerais*/
 *{
     box-sizing: border-box;
@@ -8,9 +24,26 @@
 /*configurações básicas*/
 body{
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s; /*transição suave*/
     margin: 0;
     padding: 20px;
+}
+
+#todo-form, .task-card{
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+header h1{
+    color: var(--header-color);
+}
+
+/*estilo do botão de modo*/
+.theme-switch{
+    text-align: right;
+    margin-bottom:10px;
 }
 
 .container{

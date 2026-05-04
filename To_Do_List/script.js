@@ -89,3 +89,16 @@ sortPriorityBtn.addEventListener('click', () => {
     tasks.sort((a, b) => order[a.priority] - order[b.priority]);
     renderTasks();
 });
+
+const themeBtn = document.getElementById('toggle-theme');
+
+themeBtn.addEventListener('click' , () => {
+    //verifica o tema atual
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+
+    if(currentTheme === 'dark'){
+        document.documentElement.setAttribute('data-theme', 'light');
+    } else{
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+});
