@@ -96,3 +96,17 @@ button:hover{
     gap: 10px;
     flex-wrap: wrap;
 }
+
+.stats-panel{
+    display: flex;
+    gap: 20px;
+    background-color: var(--card-bg);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+#count-pending{color: #e74c3c;} /*vermelho para pendentes*/
+#count-completed{color: #2ecc71;} /*verde para comcluídas*/

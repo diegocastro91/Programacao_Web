@@ -26,38 +26,6 @@ taskForm.addEventListener('submit', (e) => {
     renderTasks(); //atualiza a tela
 });
 
-//2.função para renderizar as tarefas na tela
-function renderTasks(filteredTasks = tasks){
-    taskContainer.innerHTML = ''; //limpa a lista antes de redesenhar
-
-    //mensagem de lista vazia(bônus)
-    if (filteredTasks.length === 0){
-        taskContainer.innerHTML = '<p style="text-align:center; padding-top:20px;">Nenhuma tarefa encontrada.</p>';
-        return;
-    }
-
-    filteredTasks.forEach(task => {
-        const taskCard = document.createElement('div');
-
-        //aplica a classe de prioridade para a cor lateral
-        const priorityClass = `priority-${task.priority.toLowerCase()}`;
-
-        taskCard.className = `task-card ${priorityClass} ${task.completed ? 'completed' : ''}`;
-
-        taskCard.innerHTML = `
-            <div>
-                <strong>${task.name}</strong> [${task.category}]<br>
-                <small>Prazo: ${task.date}</small>
-            </div>
-            <div>
-            <button onclick="toggleTask(${task.id})">✔️</button>
-            <button onclick="deleteTask(${task.id})">🗑️</button>
-            </div>
-        `;
-        taskContainer.appendChild(taskCard);
-    });
-}
-
 //3.marcar como concluída
 function toggleTask(id){
     tasks = tasks.map(task =>
@@ -102,3 +70,50 @@ themeBtn.addEventListener('click' , () => {
         document.documentElement.setAttribute('data-theme', 'dark');
     }
 });
+
+//função de contagem
+function updateCounters(){
+    const pending = tasks.filter(t => !t.completed).length;
+    const completed = tasks.filter(t => t.completed).length;
+
+    document.getElementById('count-pending').innerText = pending;
+    document.getElementById('count-completed').innerText = completed;
+}
+
+//chamando updateCounters() dentro da função renderTasks()
+function renderTasks(filteredTasks = tasks){
+    taskContainer.innerHTML = '';
+
+    //2.função para renderizar as tarefas na tela
+    function renderTasks(filteredTasks = tasks){
+        taskContainer.innerHTML = ''; //limpa a lista antes de redesenhar
+
+        //mensagem de lista vazia(bônus)
+        if (filteredTasks.length === 0){
+            taskContainer.innerHTML = '<p style="text-align:center; padding-top:20px;">Nenhuma tarefa encontrada.</p>';
+            return;
+        }
+
+        filteredTasks.forEach(task => {
+            const taskCard = document.createElement('div');
+
+            //aplica a classe de prioridade para a cor lateral
+            const priorityClass = `priority-${task.priority.toLowerCase()}`;
+
+            taskCard.className = `task-card ${priorityClass} ${task.completed ? 'completed' : ''}`;
+
+            taskCard.innerHTML = `
+                <div>
+                    <strong>${task.name}</strong> [${task.category}]<br>
+                    <small>Prazo: ${task.date}</small>
+                </div>
+                <div>
+                <button onclick="toggleTask(${task.id})">✔️</button>
+                <button onclick="deleteTask(${task.id})">🗑️</button>
+                </div>
+            `;
+            taskContainer.appendChild(taskCard);
+        });
+    }
+    updateCounters();
+}
